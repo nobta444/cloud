@@ -1,0 +1,142 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="index.master.cs" Inherits="WestlakeInternatinalProject.index" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Asia Pacific Internation School</title>
+
+
+     <%-- Bootstrap css --%>
+    <link href="CustomDesign/css/design.min.css" rel="stylesheet" />
+    <%-- datatables css --%>
+    <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <%-- fontawesome css --%>
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+    <%-- custom css --%>
+    <link href="css/customstylesheet.css" rel="stylesheet" />
+
+
+      <%-- Jquery --%>
+    <script src="CustomDesign/js/jquery-3.5.1.slim.min.js"></script>
+    <%-- popper js --%>
+    <script src="CustomDesign/js/popper.min.js"></script>
+    <%-- design js --%>
+    <script src="CustomDesign/js/design.min.js"></script>
+    <%-- Datatable js --%>
+    <script src="datatables/js/jquery.dataTables.min.js"></script>
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <header>
+         <!------------ NAVBAR ----------->
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #16c2c4;">
+                <a class="navbar-brand" href="homepage.aspx">
+                    <img src="img/logo/logoS.jpg" class="auto-style1" />
+                    Asia Pacific International School
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="homepage.aspx">Home</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="Covid-19 preventionspage.aspx">Covid-19 Preventions</a>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton4" runat="server" OnClick="LinkButton4_Click" >Student Books</asp:LinkButton>
+                        </li>
+
+                        <li class="nav-item active">
+                            <asp:LinkButton class="navlinks nav-link" ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" >User Login</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="navlinks nav-link" ID="LinkButton2" runat="server" OnClick="LinkButton2_Click" >Sign Up</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="navlinks nav-link" ID="LinkButton3" runat="server" Visible="False" OnClick="LinkButton3_Click">Logout</asp:LinkButton>
+                        </li>
+
+                        <li class="nav-item active">
+                            <asp:LinkButton class="navlinks nav-link" ID="LinkButton5" runat="server" Visible="False" OnClick="LinkButton5_Click" >Profile</asp:LinkButton>
+                        </li>
+
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton7" runat="server" Visible="False" OnClick="LinkButton7_Click"> User Pannel</asp:LinkButton>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </nav>
+        </div>
+        <!------------ NAVBAR ----------->
+</header>
+
+
+
+        <!-- Main Content Placeholder -->
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!-- Main Content Placeholder -->
+
+        <!-- Footer -->
+        <footer>
+            
+            
+  
+            <div id="footer1" class="container-fluid" style="background-color: #16c2c4;">
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p>
+                            <asp:LinkButton class="footerlinks" ID="LinkButton6" runat="server" OnClick="LinkButton6_Click" >Admin Login</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" style="background-color: #16c2c4;" ID="LinkButton12" runat="server"  Visible="False" OnClick="LinkButton12_Click">Book Management</asp:LinkButton>
+                            &nbsp;
+                            
+                            
+                            
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+            <div id="footer2" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        
+                        <p style="color:  #ffffff">&copy All right Reversed. <a class="footerlinks" href="homepage.aspx" target="_blank">Asia Pacific International School</a></p>
+                    </div>
+                </div>
+            </div>
+
+
+        </>
+                    </footer>
+        <!-- Footer -->
+    </form>
+</body>
+</html>
